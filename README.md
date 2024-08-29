@@ -1,8 +1,7 @@
-# Module 14 Challenge: Model View Controller - Tech Blog
+# Module 20 Challenge: React Portfolio
 
   ## Table of Contents
   - [Description](#description)
-  - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Tests](#tests)
@@ -11,27 +10,19 @@
   - [Questions](#questions)
 
   ## Description
-  This Homework assignment was completed for Unit Fourteen of the U of M Bootcamp, to practice creating a simple but complete full stack web application using Node.js packages and postgreSQL with, data seeded, then viewed, added to, and modified using UI and API routes. The user can view blog posts, but must log in/create an account to write new blog posts, edit their posts, or delete them. Being logged in also allows a user to leave comments on a blog post. I learned it is incredibly important to tackle such a site in pieces: because I ended up with *so many* files, I had to get one piece of the site working before moving onto the next, to avoid analysis paralysis and going in circles. This is a pretty decent starting point for creating a site with login functionality, and with some tweaking it could probably be combined with some social features to allow friend lists or even a live chat!
-
-  ## Installation
-  To install this project after copying down the repo, you will first need to run npm install (-y for default settings) on the project root, which should grant you access to the necessary libraries listed in the package.json file. You'll need a tool to call api routes if you want to simply test the backend; otherwise I recommend users simply play around with the UI, either from localhost:3001, or from the [deployed site on Render](https://mvc-tech-blog-604q.onrender.com/).
+  This Homework assignment was completed for Unit Twenty of the U of M Bootcamp, to practice creating a React app, [constructed with Vite](https://vitejs.dev/), that will serve as my professional coding portfolio. The site will allow users to view my posted work, displayed via components.
 
   ## Usage
-  1. To use this project, ensure you have [Postgres](https://www.postgresql.org/download/) and the node packages installed as specified in the Installation section above.
-  2. Open a terminal on the db folder and run psql postgres.
-  3. In Postgres, run \i schema.sql to build the db.
-  4. Open a separate terminal on the project root and run node seeds/seed.js to seed the db.
-  5. On that same node terminal, run nodemon server.js - the server will boot and the routes can be hit via Postman or Insomnia, or simply from your [localhost](http://localhost:3001/)!
+  To 'use' this project, I just recommend you view the deployed version.
 
   ## Contributing
-  If you want to contribute to this project - particularly if you want to work with me on building this out and enhancing social features, or guidance on node packages that might enhance the UX, see my contact info in the Questions section below. Don’t hesitate to reach out! I am a beginner at this stuff but always hungry to learn from others in the community.
+  If you want to contribute to this project - particularly if you are a styling guru who wants to teach me some tricks that will work in React, hit me up! I'm always trying to learn from people who know more.
 
   ## Tests
-  This project can and should be tested using Localhost, or Postman for the simplest way to both work with and visualize the data and its relationships. Pgadmin4 would also work well to see the tabluation, but it cannot call routes - only can use sql.
+  This project can and should be tested using the deployed version.
   
   ## Credits
-  - Shoutout to Gary Almes for helping me with some of these routes. Again - Always simpler than it seems!
-  - Code examples referenced from the unit 14 mini project in the U of M Bootcamp.
+  - Shoutout to Gary Almes for teaching me to code!
 
   ## Questions
   - [Check me out on Github!](https://www.github.com/floatingpoint-exaflop)
