@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import '../App.css'
+import Navigation from "./Navigation";
 
-export default function Header() {
+
+export default function Header(props) {
 
     return (
-      <>
-        <h1>Tim Scallon</h1>
-        <p>I am an aspiring developer based in North Minneapolis</p>
-      </>
+      <header className="container-fluid">
+        <Navigation />
+      </header>
     )
   }
