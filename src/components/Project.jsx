@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 
-function Project() {
+export default function Project() {
 
     return (
       <>
@@ -11,4 +11,3 @@ function Project() {
     )
   }
   
-  export default Project

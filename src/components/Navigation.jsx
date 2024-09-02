@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 
-function Navigation() {
+export default function Navigation() {
 
     return (
       <>
@@ -11,4 +11,3 @@ function Navigation() {
     )
   }
   
-  export default Navigation

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 
-function Footer() {
+export default function Footer() {
 
     return (
       <>
@@ -10,5 +10,3 @@ function Footer() {
       </>
     )
   }
-  
-  export default Footer
