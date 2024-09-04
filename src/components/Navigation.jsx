@@ -10,9 +10,9 @@ export default function Navigation(props) {
 
   const menu = [
     { id: 1, label: "🖥️ About Me", href: "/" },
-    { id: 2, label: "💼 Code Portfolio", href: "#" },
-    { id: 3, label: "📝 My Resume/CV", href: "#" },
-    { id: 4, label: "📧 Contact Me", href: "#" },
+    { id: 2, label: "💼 Code Portfolio", href: "/portfolio" },
+    { id: 3, label: "📝 My Resume/CV", href: "/resume" },
+    { id: 4, label: "📧 Contact Me", href: "/contact" },
   ];
 
   return (
