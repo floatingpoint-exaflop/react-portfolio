@@ -8,7 +8,9 @@ import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "./more.css";
 
 export default function App() {
   const creator = "Tim Scallon";
@@ -24,7 +26,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<AboutMe />}></Route>
                 <Route path="/portfolio" element={<Portfolio />}></Route>
-                <Route path="/portfolio/:id?" element={<Project Items={itemsInStorage}/>}/>
+                <Route path="/portfolio/:id?" element={<Project />}/>
                 <Route path="/resume" element={<Resume />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
                 <Route path="/*" element={<NotFound/>}/>

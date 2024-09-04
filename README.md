@@ -25,6 +25,7 @@
   - Shoutout to Gary Almes for teaching me to code!
   - Navbar built using advice from [Bootstrap Doco](https://getbootstrap.com/docs/5.3/components/navbar/).
   - Footer icons from [Bootstrap Icons](https://icons.getbootstrap.com/).
+  - Resume PDF rendered using [React-PDF](https://www.npmjs.com/package/react-pdf).
 
   ## Questions
   - [Check me out on Github!](https://www.github.com/floatingpoint-exaflop)

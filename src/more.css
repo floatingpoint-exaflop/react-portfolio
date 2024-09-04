@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  background-color: #859ab0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.footer-icons svg {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #ffffff;
+}
+
+.footer-icons svg:hover {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #007bff;
+}
+
+.footer-icons svg:visited {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #aeff00;
+}
+
+.footer-icons svg:active {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #007bff;
+}
