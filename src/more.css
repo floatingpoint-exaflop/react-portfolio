@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  background-color: #996888;
 }
 
 body {
@@ -9,14 +10,31 @@ body {
   min-height: 100vh;
 }
 
+:root {
+  background-color: #C99DA3;
+}
+
+header, nav div {
+  background-color: #C99DA3;
+  border-color: #C99DA3;
+}
+
+.navbar-nav a {
+  color: #2A2B2A;
+}
+
+main {
+  flex: 1;
+  /* Ensure main takes remaining space */
+}
+
 footer {
-  bottom: 0;
   width: 100%;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 1rem;
-  margin-top: auto;
-  background-color: #859ab0;
+  margin-top: auto; /* This helps push the footer to the bottom when content is short */
+  background-color: #C99DA3;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -30,23 +48,10 @@ footer {
 .footer-icons svg {
   cursor: pointer;
   transition: color 0.3s;
-  color: #ffffff;
+  color: #996888;
 }
 
 .footer-icons svg:hover {
   cursor: pointer;
-  transition: color 0.3s;
-  color: #007bff;
-}
-
-.footer-icons svg:visited {
-  cursor: pointer;
-  transition: color 0.3s;
-  color: #aeff00;
-}
-
-.footer-icons svg:active {
-  cursor: pointer;
-  transition: color 0.3s;
-  color: #007bff;
+  color: #5E4955;
 }
