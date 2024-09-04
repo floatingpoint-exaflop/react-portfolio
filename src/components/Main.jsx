@@ -1,10 +1,14 @@
 import { useState } from 'react'
-
-export default function Main() {
+import { AboutMe, Portfolio, Resume, Project, Contact} from "./"
+export default function Main(props) {
 
     return (
       <main>
-
+                      {/* <AboutMe />
+                      <Portfolio />
+                      <Resume />
+                      <Project />
+                      <Contact /> */}
       </main>
     )
   }

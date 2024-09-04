@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Navigation() {
+export default function Navigation(props) {
 
   const [current, setCurrent] = useState("About Me");
 
@@ -9,17 +9,17 @@ export default function Navigation() {
   };
 
   const menu = [
-    { id: 1, label: "🖥️ About Me", href: "#" },
-    { id: 2, label: "💼 Portfolio", href: "#" },
-    { id: 3, label: "📝 Resume", href: "#" },
-    { id: 4, label: "📧 Contact", href: "#" },
+    { id: 1, label: "🖥️ About Me", href: "/" },
+    { id: 2, label: "💼 Code Portfolio", href: "#" },
+    { id: 3, label: "📝 My Resume/CV", href: "#" },
+    { id: 4, label: "📧 Contact Me", href: "#" },
   ];
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Tim Scallon: Analyst/Dev
+        <a className="navbar-brand">
+          {props.creator}: {props.title}
         </a>
         <button
           className="navbar-toggler"

@@ -1,12 +1,11 @@
 import Header from "./Header"
 import Navigation from "./Navigation"
 import Main from "./Main"
-import Project from "./Project"
 import Footer from "./Footer"
-import AboutMe from "./AboutMe"
-import Portfolio from "./Portfolio"
-import Resume from "./Resume"
-import Contact from "./Contact"
+import Project from "./Project"
+
+import { AboutMe, Portfolio, Resume, Contact, } from "../pages"
+
 
 export {
     Header,

@@ -2,8 +2,8 @@
 export default function Resume() {
 
     return (
-      <footer>
+      <article>
 
-      </footer>
+      </article>
     )
   }

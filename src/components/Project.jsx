@@ -3,9 +3,9 @@ import { useState } from 'react'
 export default function Project() {
 
     return (
-      <article>
+      <section>
 
-      </article>
+      </section>
     )
   }
   

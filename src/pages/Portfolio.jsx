@@ -2,8 +2,8 @@
 export default function Portfolio() {
 
     return (
-      <footer>
+      <article>
 
-      </footer>
+      </article>
     )
   }
