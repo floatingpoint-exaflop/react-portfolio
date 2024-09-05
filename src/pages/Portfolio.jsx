@@ -47,7 +47,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <section>
+    <section className="card portfoliocard">
       <h2>Here's what I've been working on lately:</h2>
       <div className="container">
         <div className="row">

@@ -6,8 +6,8 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/tim-scallon" target="_blank" rel="noopener noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="32"
+              height="32"
               fill="currentColor"
               className="bi bi-linkedin"
               viewBox="0 0 16 16"
@@ -18,8 +18,8 @@ export default function Footer() {
           <a href="http://github.com/floatingpoint-exaflop" target="_blank" rel="noopener noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="32"
+              height="32"
               fill="currentColor"
               className="bi bi-github"
               viewBox="0 0 16 16"
@@ -30,8 +30,8 @@ export default function Footer() {
           <a href="https://www.instagram.com/frederico_swarthings" target="_blank" rel="noopener noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="32"
+              height="32"
               fill="currentColor"
               className="bi bi-instagram"
               viewBox="0 0 16 16"

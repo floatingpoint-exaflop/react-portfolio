@@ -19,7 +19,7 @@ header, nav div {
   border-color: #C99DA3;
 }
 
-.navbar-nav a {
+.navbar-brand {
   color: #2A2B2A;
 }
 
@@ -54,4 +54,28 @@ footer {
 .footer-icons svg:hover {
   cursor: pointer;
   color: #5E4955;
+}
+
+.aboutme {
+  padding: 5px;
+  background-color: #5E4955;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.portfoliocard {
+    padding: 5px;
+    background-color: #5E4955;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.portfoliocard h2 {
+    margin-left: 5px;
+}
+
+.contactform {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #5E4955;
 }

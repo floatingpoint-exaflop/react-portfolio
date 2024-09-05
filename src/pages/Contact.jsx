@@ -1,35 +1,134 @@
 import { useState, useEffect } from "react";
 
-
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    contactName: "",
+    email: "",
+    msg: "",
+  });
+  const [formErrors, setFormErrors] = useState({
+    contactName: "",
+    email: "",
+    msg: "",
+  });
 
-  const [ formField, setFormField] = useState("")
+  //This does not currently work, because the backend doesn't exist yet.
+  const submitForm = (event) => {
+    event.preventDefault();
+    let errors = {};
+    if (!formData.contactName.trim()) {
+      errors.contactName = "Name is required.";
+    }
+    if (!formData.email.trim()) {
+      errors.email = "Email is required.";
+    } else if (!validateEmail(formData.email)) {
+      errors.email = "Please enter a valid email address.";
+    }
+    if (!formData.msg.trim()) {
+      errors.msg = "Message is required.";
+    }
+    
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    // API CALL GOES HERE?
+  };
 
-  const defaultData = { fname: "", lname: "", email: "", phone: "" }
-  
-    const [ formData, setFormData ] = useState(defaultData)
-  
-    async function submitForm(){
-      const resp = await fetch("....", {
-        method: 'POST',
-        body: JSON.stringify(formData)
-      })
-      setFormData(defaultData)
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+    if (value.trim() !== "") {
+      setFormErrors({ ...formErrors, [name]: "" });
     }
-  
-    function handleInputChange(event){
-      // event.target.name = property that needs to be updated 
-      // event.target.value = new value to be assigned 
-      setFormData({...formData, [event.target.name]: event.target.value })
+  }
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+
+    if (value.trim() === "") {
+      setFormErrors({ ...formErrors, [name]: `${name} is required.` });
     }
-  
-    return (
+    if (name === "email" && value.trim() !== "" && !validateEmail(value)) {
+      setFormErrors({
+        ...formErrors,
+        email: "Please enter a valid email address.",
+      });
+    }
+  };
+
+  return (
+    <div className="card contactform p-4 shadow">
+      <h2>Let's keep in touch.</h2>
       <form>
-        <input type="text" name="contactName" value={formData.contactName} onChange={handleInputChange} />
-        <input type="text" name="email" value={formData.email} onChange={handleInputChange} />
-        <input type="text" name="msg" value={formData.msg} onChange={handleInputChange} />
-  
-        <button onClick={submitForm}>Submit</button>
+        <div className="row">
+          <div className="col-md-6 mb-3">
+            <label htmlFor="contactName" className="form-label">
+              Your Name
+            </label>
+            <input
+              type="text"
+              name="contactName"
+              id="contactName"
+              className={`form-control ${formErrors.contactName ? 'is-invalid' : ''}`}
+              placeholder="Enter your name"
+              value={formData.contactName}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+            />
+            {formErrors.contactName && (
+              <div className="invalid-feedback">{formErrors.contactName}</div>
+            )}
+          </div>
+
+          <div className="col-md-6 mb-3">
+            <label htmlFor="email" className="form-label">
+              Your Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className={`form-control ${formErrors.email ? 'is-invalid' : ''}`}
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+            />
+            {formErrors.email && (
+              <div className="invalid-feedback">{formErrors.email}</div>
+            )}
+          </div>
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="msg" className="form-label">
+            A Message For Me
+          </label>
+          <textarea
+            name="msg"
+            id="msg"
+            className={`form-control ${formErrors.msg ? 'is-invalid' : ''}`}
+            placeholder="Enter your message"
+            rows="4"
+            value={formData.msg}
+            onChange={handleInputChange}
+            onBlur={handleBlur}
+          ></textarea>
+          {formErrors.msg && (
+            <div className="invalid-feedback">{formErrors.msg}</div>
+          )}
+        </div>
+
+        <button type="button" className="btn btn-primary" onClick={submitForm}>
+          Submit
+        </button>
       </form>
-    )
+    </div>
+  );
 }

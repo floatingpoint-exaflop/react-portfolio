@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Project({ project }) {
   return (
-    <div className="col-6 mb-4">
+    <div className="col-12 col-md-6 mb-4">
       <div className="card">
         <img className="card-img-top" src={project.img} alt="Card image cap" />
         <div className="card-body">
