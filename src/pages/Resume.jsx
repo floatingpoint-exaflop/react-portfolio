@@ -1,17 +1,18 @@
-export default function Resume() {
+import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import { Container, Row } from "react-bootstrap";
+import uri from "../components/Resume_TimScallonSept2024.pdf";
 
-  const pdfPath = "/Resume_TimScallonSept2024.pdf"
-  
+export default function Resume() {;
+  const docs = [{ uri }];
+
   return (
     <article>
       <h2>My Professional Resume & CV (Printable/Downloadable)</h2>
-      <iframe
-        src={pdfPath}
-        title="Resume PDF"
-        width="100%"
-        height="500px"
-        style={{ border: "none" }}
-      ></iframe>
+      <Container>
+        <Row>
+          <DocViewer pluginRenderers={DocViewerRenderers} documents={docs} />
+        </Row>
+      </Container>
     </article>
   );
 }
