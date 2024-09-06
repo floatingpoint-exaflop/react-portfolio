@@ -22,10 +22,16 @@ header, nav div, nav {
 .navbar-brand {
   color: #2A2B2A;
 }
+.navbar-brand:hover {
+  color: #2A2B2A;
+}
+
+.navbar-nav a {
+  color: #2A2B2A
+}
 
 main {
-  flex: 1;
-  /* Ensure main takes remaining space */
+  flex-grow: 1;
 }
 
 footer {
@@ -33,7 +39,7 @@ footer {
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 1rem;
-  margin-top: auto; /* This helps push the footer to the bottom when content is short */
+  margin-top: auto;
   background-color: #C99DA3;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;

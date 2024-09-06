@@ -1,12 +1,8 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Navigation(props) {
-
-  const [current, setCurrent] = useState("About Me");
-
-  const handleNavClick = (page) => {
-    setCurrent(page);
-  };
+  const location = useLocation();
 
   const menu = [
     { id: 1, label: "🖥️ About Me", href: "/" },
@@ -18,9 +14,9 @@ export default function Navigation(props) {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand">
+        <span className="navbar-brand">
           {props.creator}: {props.title}
-        </a>
+        </span>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,10 +33,13 @@ export default function Navigation(props) {
             {menu.map((page) => (
               <a
                 key={page.id}
-                className={`nav-link ${current === page.label ? "active" : ""}`}
+                className={`nav-link ${
+                  location.pathname === page.href ? "active" : ""
+                }`}
                 href={page.href}
-                aria-current={current === page.label ? "page" : undefined}
-                onClick={() => handleNavClick(page.label)}
+                aria-current={
+                  location.pathname === page.href ? "page" : undefined
+                }
               >
                 {page.label}
               </a>
