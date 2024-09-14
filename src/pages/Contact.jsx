@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,10 +12,11 @@ export default function Contact() {
     msg: "",
   });
 
-  //This does not currently work, because the backend doesn't exist yet.
   const submitForm = (event) => {
     event.preventDefault();
     let errors = {};
+    
+    // Validate the form fields
     if (!formData.contactName.trim()) {
       errors.contactName = "Name is required.";
     }
@@ -27,12 +28,19 @@ export default function Contact() {
     if (!formData.msg.trim()) {
       errors.msg = "Message is required.";
     }
-    
+
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
     }
-    // API CALL GOES HERE?
+
+    // Construct the mailto link
+    const subject = `Portfolio msg from ${formData.contactName}`;
+    const body = `Sender Email: ${formData.email}\n\nMessage:\n${formData.msg}`;
+    const mailtoLink = `mailto:timscallon1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open mailto link
+    window.location.href = mailtoLink;
   };
 
   function handleInputChange(event) {
@@ -67,7 +75,7 @@ export default function Contact() {
       <h2>Let's keep in touch.</h2>
       <form>
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-3 mb-3">
             <label htmlFor="contactName" className="form-label">
               Your Name
             </label>
@@ -86,7 +94,7 @@ export default function Contact() {
             )}
           </div>
 
-          <div className="col-md-6 mb-3">
+          <div className="col-md-3 mb-3">
             <label htmlFor="email" className="form-label">
               Your Email
             </label>
