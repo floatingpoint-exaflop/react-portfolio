@@ -10,7 +10,7 @@
   - [Questions](#questions)
 
   ## Description
-  This Homework assignment was completed for Unit Twenty of the U of M Bootcamp, to practice creating a React app, [constructed with Vite](https://vitejs.dev/), that will serve as my professional coding portfolio. The site will allow users to view my posted work, displayed via components.
+  This professional coding portfolio was created to practice creating a React app, [constructed with Vite](https://vitejs.dev/). The site will allow users to view my posted work, displayed via components.
 
   ## Usage
   To 'use' this project, I just recommend you view the deployed version.
