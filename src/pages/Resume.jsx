@@ -1,6 +1,7 @@
 import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 import { Container, Row } from "react-bootstrap";
-import uri from "../components/Resume_TimScallonSept2024.pdf";
+// import uri from "../components/Resume_TimScallonSept2024.pdf";
+import uri from "../../public/documents/Resume_TimScallonOct2024.pdf";
 
 export default function Resume() {;
   const docs = [{ uri }];

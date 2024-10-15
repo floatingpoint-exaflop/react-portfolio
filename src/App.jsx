@@ -5,6 +5,7 @@ import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
+import Writing from "./pages/Writing";
 import NotFound from "./pages/NotFound";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -29,6 +30,7 @@ export default function App() {
                 <Route path="/portfolio/:id?" element={<Project />}/>
                 <Route path="/resume" element={<Resume />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/writing" element={<Writing />}></Route>
                 <Route path="/*" element={<NotFound/>}/>
               </Routes>
             </Main>
